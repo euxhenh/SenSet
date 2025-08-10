@@ -40,7 +40,7 @@ class HLCA:
         return self._hlca
 
     @cached_property
-    def age(self) -> NDArray[np.float_]:
+    def age(self) -> NDArray[np.floating]:
         """Return an array of ages per cell"""
         return self.adata.obs[self.age_key].to_numpy()
 
@@ -52,7 +52,7 @@ class HLCA:
         return list(zip(donors, ages))
 
     @cached_property
-    def unique_age(self) -> NDArray[np.float_]:
+    def unique_age(self) -> NDArray[np.floating]:
         """Return each subjects age"""
         return np.asarray([v[1] for v in self.donor_age])
 
